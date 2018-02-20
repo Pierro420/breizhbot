@@ -29,8 +29,8 @@
 
 #define STEEPS_PER_MOTOR_REVOLUTION     4096 // cf documentation (4096 en mode HALF STEP, 2048 en mode FULL STEP)
 
-#define WHEEL_DIAMETER_MM               65 // Diamètre des roues en millimètre
-#define WHEEL_SPACING_MM                110 // Entraxe des roues en millimètre
+#define WHEEL_DIAMETER_MM               68 // Diamètre des roues en millimètre
+#define WHEEL_SPACING_MM                113 // Entraxe des roues en millimètre
 
 #define STEEPS_FOR_1MM                  STEEPS_PER_MOTOR_REVOLUTION/(PI * WHEEL_DIAMETER_MM)
 #define STEEPS_FOR_1DEG                 STEEPS_FOR_1MM * WHEEL_SPACING_MM * (PI / 360)

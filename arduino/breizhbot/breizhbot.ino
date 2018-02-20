@@ -28,15 +28,12 @@ void setup()
   Serial.begin(9600);
 //*
   next_cmds = (char*) calloc(1, sizeof(char)); 
-  if(next_cmds == NULL) Serial.println("calloc current_cmd failed");
+  if(next_cmds == NULL) Serial.println("calloc next_cmd failed");
   current_cmd = (char*) calloc(1, sizeof(char)); 
   if(next_cmds == NULL) Serial.println("calloc current_cmd failed");
 //*/
   
   initMotors(debug);
-//  setDistanceToDo(1, 100, 1000, true);
-//  setTurnToDo(BACKWARD, LEFT, 100, 360, 1000, true);
- // setCircle(200, PI, 100, true);
 
   initServo();
 
@@ -92,7 +89,7 @@ void loop()
 //    On libère current_cmd
 //   
   if(current_cmd_is_finished){
-    current_cmd = "";
+    free(current_cmd);
   }
 
   
